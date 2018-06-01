@@ -1,3 +1,9 @@
+---
+layout: post
+title: jekyll
+categories: static cms
+tags: 
+---
 # jekyll
 
 phpstorm markdown  
