@@ -3,8 +3,8 @@ title: "Eloquent"
 permalink: /eloquent/
 toc: true
 ---
-condition 
-==========
+
+### condition 
 
 - php 7.0 OVER
 - assume the User model stores records in the users table
@@ -18,8 +18,7 @@ protected $table = 'my_users';
 // primaryKey
 }
 ```
-Select 
-=======
+### Select 
 
 ```php
 $users = User::all();  
@@ -38,16 +37,14 @@ $flights = Flight::where('active', 1)->orderBy('name',
 ```
 Query builder: <https://laravel.com/docs/5.1/queries>
 
-Retrieving ONE Single Row / Columns From A Table
-================================================
+### Retrieving ONE Single Row / Columns From A Table
 
 ```php
 $user = DB::table('users')->where('name', 'John')->first();
 $email = DB::table('users')->where('name', 'John')->value('email');
 ```
 
-Retrieving A List Of Column Values
-==================================
+### Retrieving A List Of Column Values
 
 If you would like to retrieve an array containing the values of a single column,
 you may use the lists method. In this example, we'll retrieve an array of role
@@ -82,8 +79,7 @@ $user->touch(); // update timestamps
 Soft Deleting
 use SoftDeletes;
 
-Create Table For Migration: schema()
-====================================
+### Create Table For Migration: schema()
 
 First create a new folder and name it “database”. Now, create a new file for the
 users table and name it “User.php”.
@@ -103,8 +99,7 @@ Capsule::schema()->create('users', function ($table) {
 });
 ```
 
-Using The Query Builder
-=======================
+### Using The Query Builder
 
 Query builder: [https://laravel.com/docs/5.1/queries](https://laravel.com/docs/5.1/queries)
 
@@ -118,8 +113,7 @@ Capsule::schema()->create('users', function ($table) {
 });
 ```
 
-Inserting 
-==========
+### Inserting 
 
 1. save method  
 
@@ -129,15 +123,11 @@ Inserting
   $flight->save();
   ```
 
-  
-
 2. create method : with fillable, guarded attribute in Model  
 
   ```php
   $flight = Flight::create(['name' => 'Flight 10']);
   ```
-
-  
 
 3. firstOrCreate, firstOrNew  
 
@@ -154,7 +144,7 @@ if a model is not found, a new model instance will be returned. Note that the
 model returned by firstOrNew has not yet been persisted to the database. You
 will need to call save manually to persist it:
 
-## Updating Models
+### Updating Models
 
 1.  Save method
 ```php
@@ -169,7 +159,7 @@ Flight::where('active', 1)
         	->update(['delayed' => 1]);
 ```
 
-## Delete
+### Delete
 
 1.  Load, find and delete()
 
@@ -177,8 +167,7 @@ Flight::where('active', 1)
 
 3.  With query result -\> delete()
 
-Scope
-=====
+### Scope
 
 Predefined query function  
 
@@ -201,17 +190,12 @@ How to use
 $users = App\User::popular()->active()->orderBy('created_at')->get();
 ```
 
-  
-
-Globally with static method
-===========================
-
-\$capsule-\>setAsGlobal(); // Make this Capsule instance available globally via
-static methods
+### Globally with static method
 
 ex)
 
 ```php
+$capsule-\>setAsGlobal();
 $users = Capsule::table('users')->where('votes', '>', 100)->get();
 $results = Capsule::select('select * from users where id = ?', array(1));  //?? no select method??
 Capsule::schema()->create('users', function ($table) {
