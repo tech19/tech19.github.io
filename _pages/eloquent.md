@@ -154,11 +154,9 @@ if a model is not found, a new model instance will be returned. Note that the
 model returned by firstOrNew has not yet been persisted to the database. You
 will need to call save manually to persist it:
 
-Updating Models
-===============
+## Updating Models
 
 1.  Save method
-
 ```php
 $flight = new Flight;
 $flight->name = $request->name;
@@ -169,11 +167,9 @@ $flight->save();
 Flight::where('active', 1)
 	->where('destination', 'San Diego')
         	->update(['delayed' => 1]);
-
 ```
 
-Delete
-======
+## Delete
 
 1.  Load, find and delete()
 
