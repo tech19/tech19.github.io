@@ -29,3 +29,16 @@ thephpleague / csv
 
 domain, email DNS validation
 
+### .env
+
+composer require vlucas/phpdotenv
+
+```php
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+	// call
+$s3_bucket = getenv('S3_BUCKET');
+$s3_bucket = $_ENV['S3_BUCKET'];
+$s3_bucket = $_SERVER['S3_BUCKET'];
+```
+
