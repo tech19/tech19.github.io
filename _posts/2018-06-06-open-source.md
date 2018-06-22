@@ -29,6 +29,25 @@ thephpleague / csv
 
 domain, email DNS validation
 
+```php
+$validator = new Validator(DATA ARRAY);
+$validator->rule('required', 'name');
+$validator->labels([
+	'name' => 'Name',
+]);
+// form post
+$v = new Valitron\Validator($_POST);
+$v->rule('required', ['name', 'email']);
+$v->rule('email', 'email');
+if($v->validate()) {
+    echo "Yay! We're all good!";
+} else {
+    print_r($v->errors());
+}
+```
+
+
+
 ### .env
 
 composer require vlucas/phpdotenv
