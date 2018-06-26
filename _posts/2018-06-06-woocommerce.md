@@ -26,7 +26,6 @@ function change_menu($items){
     }
   }
   return $items;
-
 }
 add_filter('wp_nav_menu_objects', 'change_menu');
 ```
@@ -47,7 +46,7 @@ Settings > Permalinks : save
 
 >REST API keys
 1. WordPress admin interface
-  WooCommerce > Settings > API > Keys/Apps.
+    WooCommerce > Settings > API > Keys/Apps.
 2. can be auto-generated through an endpoint
 
 >composer require automattic/woocommerce
