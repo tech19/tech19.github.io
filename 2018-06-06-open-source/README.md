@@ -1,31 +1,33 @@
 ---
 title: github open source
-categories: 
- - open source
-tags: 
- - open source
+categories:
+  - open source
+tags:
+  - open source
 toc: true
 ---
 
-### Date Time
+# open source
+
+## Date Time
 
 Carbon/Carbon
 
-### Domain / url
+## Domain / url
 
-Php domain parser:  jeremykendall/php-domain-parser
+Php domain parser: jeremykendall/php-domain-parser
 
-### Boostrap maxlength
+## Boostrap maxlength
 
-### x-editable
+## x-editable
 
-success:  ß response.status == ‘error’ …
+success: ß response.status == ‘error’ …
 
-### csv
+## csv
 
 thephpleague / csv
 
-### valitron
+## valitron
 
 domain, email DNS validation
 
@@ -33,7 +35,7 @@ domain, email DNS validation
 $validator = new Validator(DATA ARRAY);
 $validator->rule('required', 'name');
 $validator->labels([
-	'name' => 'Name',
+    'name' => 'Name',
 ]);
 // form post
 $v = new Valitron\Validator($_POST);
@@ -46,31 +48,27 @@ if($v->validate()) {
 }
 ```
 
-
-
-### .env
+## .env
 
 composer require vlucas/phpdotenv
 
 ```php
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
-	// call
+    // call
 $s3_bucket = getenv('S3_BUCKET');
 $s3_bucket = $_ENV['S3_BUCKET'];
 $s3_bucket = $_SERVER['S3_BUCKET'];
 ```
 
-### summernote
+## summernote
 
+## sweetalert2
 
-
-### sweetalert2
-
-- input validator
+* input validator
 
 ```javascript
-	inputValidator: function (result) {
+    inputValidator: function (result) {
         return new Promise(function (resolve, reject) {
             if (result) {
                 resolve()
@@ -80,7 +78,8 @@ $s3_bucket = $_SERVER['S3_BUCKET'];
         })
     },
 ```
-- two fields
+
+* two fields
 
 ```javascript
 swal({
@@ -104,7 +103,7 @@ swal({
 }).catch(swal.noop)
 ```
 
-- ajax
+* ajax
 
 ```javascript
 swal({
@@ -179,31 +178,37 @@ function (dismiss) {
       "error"
     )
   }
-})	
+})
 ```
-### 토스트 UI editor
 
-### chart lava google
+## 토스트 UI editor
 
-### multi select
+## chart lava google
 
-### bt editable
+## multi select
 
-### bt datetime
+## bt editable
 
-### excel, pdf (php)
+## bt datetime
 
-### fullcalendar
+## excel, pdf \(php\)
 
-### jq validate
+## fullcalendar
 
-### bt upload (fileinput)
+## jq validate
 
-### datatables
+## bt upload \(fileinput\)
 
-### PHPMailer
+## datatables
+
+## PHPMailer
 
 
 
-
+* Infinite Scroll
+* Masonry
+* Shopify/draggable
+* ghostery
+* Aura for php
+* blackfire: profiling
 

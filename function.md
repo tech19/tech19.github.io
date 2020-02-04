@@ -9,6 +9,8 @@ toc: true
 
 # function
 
+### safe url string
+
 [http://cubiq.org/the-perfect-php-clean-url-generator](http://cubiq.org/the-perfect-php-clean-url-generator)
 
 ```php
@@ -34,5 +36,52 @@ function sanitize($string, $force_lowercase = true, $anal = false) {
             strtolower($clean) :
         $clean;
 }
+```
+
+### hash password
+
+```php
+$hashed_password = password_hash('mypassword', PASSWORD_DEFAULT);
+echo $hashed_password;
+if (hash_equals($hashed_password, crypt('mypassword', $hashed_password))) {
+//echo "Password verified!";}
+```
+
+### Adblock detact
+
+Create ads.js file within var canRunAds = true;
+
+```php
+<body>
+	<script>
+		if(window.canRunAds === undefined){
+			//adblock detected
+		}
+	</script>
+</body>
+```
+
+### responsive Email
+
+```php
+$messageBody = file_get_contents('email.html'); // inline style...
+$messageBody = str_replace("##aaa##", $link, $messageBody);
+$messageBody = str_replace("##bbb##", $f->sdffsdf, $messageBody);
+$messageBody = str_replace("##ccc##", $f->sdfsfd, $messageBody);
+
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->SMTPDebug = 0;
+$mail->Host = SMTP_HOST;
+$mail->SMTPAuth = true;
+$mail->Username = SMTP_USER;
+$mail->Password = SMTP_PW;
+$mail->setFrom($_POST['emailFrom'], $_POST['emailFromName']);
+$mail->addAddress($_POST['emailTo'], $_POST['emailToName']);
+$mail->isHTML(true);
+$mail->Subject = $_POST['emailSubject'];
+//$mail->msgHTML(file_get_contents('email.html'), dirname(__FILE__));
+$mail->msgHTML($messageBody);
+$error = (!$mail->send()) ? true : false;
 ```
 

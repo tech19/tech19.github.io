@@ -5,35 +5,7 @@ toc: true
 
 # aaaa
 
-* click image modal
-
-  ? Image Lightbox - this option allows you display the image in a lightbox. with same image
-
-  ? Lightbox Image - this option lets you upload a different image to display on the lightbox.
-
-image lightbox? with image max width
-
-* plugin\(frontend add\)list+add?, add seperate?
-* hook
-* template: bell, bizpage
-* 구테 csrf test
-* smtop ac1
-
-## Roboto font
-
-```text
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-```
-
-## xdebug profiling
-
-xdebug.profiler\_enable=1;   
-xdebug.profiler\_output\_dir = "c:\xampp\tmp"   
-xdebug.profiler\_output\_name = "cachegrind.out.%t-%s"   
-tools &gt; Analyze xdebug profile snapshot   
-or Webgrind: github\(jokkedk/webgrind\)
-
-## curl + https problem
+## curl https problem
 
 download: curl-7.56.1-win64-mingw.7z extract: c:\aaa\curl\  
     curl.exe, curl-ca-bundle.crt   
@@ -45,28 +17,7 @@ use function -&gt; error\_log\(message,type,destination,headers\);
 \[php.ini\]   
 error\_log = php\_errors.log   
 error\_log="C:\xampp\tmp\php\_error\_log"   
-with mtail.exe
-
-* Infinite Scroll
-* Masonry
-* Shopify/draggable
-* ghostery
-* Aura for php
-* blackfire: profiling
-
-## Adblock detact
-
-Create ads.js file within var canRunAds = true;
-
-```php
-<body>
-	<script>
-		if(window.canRunAds === undefined){
-			//adblock detected
-		}
-	</script>
-</body>
-```
+with **mtail.exe**
 
 ## phpFastCache
 
@@ -137,13 +88,10 @@ SetOutputFilter DEFLATE
 
 ## jQuery UI Sortable
 
-[https://stackoverflow.com/questions/15633341/jquery-ui-sortable-then-write-order-into-a-database](https://stackoverflow.com/questions/15633341/jquery-ui-sortable-then-write-order-into-a-database)
+{% embed url="https://stackoverflow.com/questions/15633341/jquery-ui-sortable-then-write-order-into-a-database" %}
 
-## Grav:    flat-file CMS
 
-[https://getgrav.org/](https://getgrav.org/)
 
-git phpstorm youtube   
 react lazy loading   
 html compress   
 steemit design   
@@ -158,15 +106,6 @@ typesource: text in image, banner
 
 [https://lobianijs.com/site/lobipanel](https://lobianijs.com/site/lobipanel):min, max bootstrap panel, unpin dragable  
 webframeworks.kr       code example
-
-## hash password
-
-```php
-$hashed_password = password_hash('mypassword', PASSWORD_DEFAULT);
-echo $hashed_password;
-if (hash_equals($hashed_password, crypt('mypassword', $hashed_password))) {
-//echo "Password verified!";}
-```
 
 ## grid layout: masonry
 
@@ -183,28 +122,4 @@ if (hash_equals($hashed_password, crypt('mypassword', $hashed_password))) {
 [https://www.gridbox.io/](https://www.gridbox.io/) pw: gridmko
 
 [https://bootstrap.build/app/v4.1.1/](https://bootstrap.build/app/v4.1.1/)
-
-## responsive Email
-
-```php
-$messageBody = file_get_contents('email.html'); // inline style...
-$messageBody = str_replace("##aaa##", $link, $messageBody);
-$messageBody = str_replace("##bbb##", $f->sdffsdf, $messageBody);
-$messageBody = str_replace("##ccc##", $f->sdfsfd, $messageBody);
-
-$mail = new PHPMailer;
-$mail->isSMTP();
-$mail->SMTPDebug = 0;
-$mail->Host = SMTP_HOST;
-$mail->SMTPAuth = true;
-$mail->Username = SMTP_USER;
-$mail->Password = SMTP_PW;
-$mail->setFrom($_POST['emailFrom'], $_POST['emailFromName']);
-$mail->addAddress($_POST['emailTo'], $_POST['emailToName']);
-$mail->isHTML(true);
-$mail->Subject = $_POST['emailSubject'];
-//$mail->msgHTML(file_get_contents('email.html'), dirname(__FILE__));
-$mail->msgHTML($messageBody);
-$error = (!$mail->send()) ? true : false;
-```
 
