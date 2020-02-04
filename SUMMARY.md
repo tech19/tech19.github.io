@@ -17,7 +17,7 @@
 * [mysqliDB](mysqlidb.md)
 * [open source library](open-source-library/README.md)
   * [eslint](open-source-library/eslint.md)
-  * [faker](open-source-library/phplibrary.md)
+  * [phinx faker](open-source-library/phinx-faker.md)
 * [Optimization](optimization.md)
 * [php](2018-06-06-php.md)
 * [phpstorm](phpstorm.md)
