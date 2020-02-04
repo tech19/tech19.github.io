@@ -5,9 +5,10 @@ categories:
 tags:
   - magento
 toc: true
+description: 'restful API, "FROM OUTSIDE OF SERVER"'
 ---
 
-# Magento restful API, "FROM OUTSIDE OF SERVER"
+# Magento
 
 * SOAP
 * XML-RPC

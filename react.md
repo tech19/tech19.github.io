@@ -7,7 +7,7 @@ tags:
 toc: true
 ---
 
-# react
+# React
 
 google.co.kr : react 예제
 
