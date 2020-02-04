@@ -7,7 +7,7 @@
 * [docker](docker.md)
 * [debug](debug.md)
 * [eloquent](eloquent.md)
-* [function](function.md)
+* [code function](code-function.md)
 * [git](2018-06-06-git.md)
 * [javascript](2018-06-06-javascript.md)
 * [node npm](node-npm.md)

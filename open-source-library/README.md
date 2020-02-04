@@ -13,6 +13,19 @@ toc: true
 
 Carbon/Carbon
 
+### image resize
+
+{% embed url="https://github.com/gumlet/php-image-resize" %}
+
+* size on disk: 10k &lt;
+* 1267 x 903 : 가로 10 세로 7 
+* bit depth: 32
+* 40%, 15%
+* 가로 &lt; 세로 =&gt; x
+* 1280 x 12...  =&gt; x
+* 1267 x 903 인데 그냥 하얀거 size가 10k &lt;
+* 긴거 -&gt; 짤라야
+
 ### Domain / url
 
 Php domain parser: jeremykendall/php-domain-parser
