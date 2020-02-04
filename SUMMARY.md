@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Initial page](README.md)
+* [security](security.md)
 * [aaaa](aaaa.md)
 * [composer](composer.md)
 * [css](css.md)
@@ -26,6 +27,7 @@
 * [reqularExp](reqularexp.md)
 * [selenium](2018-06-06-selenium.md)
 * [slim](2018-06-06-slim.md)
+* [telegram api](telegram-api.md)
 * [validation](validation.md)
 * [vagrant](vagrant.md)
 * [wordpress](2018-06-06-wp/README.md)

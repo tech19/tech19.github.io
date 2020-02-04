@@ -6,7 +6,7 @@ toc: true
 
 # phinx faker
 
-## generates fake data
+generates fake data
 
 {% hint style="info" %}
 composer require fzaninotto/faker
@@ -14,7 +14,7 @@ composer require fzaninotto/faker
 
 {% embed url="https://github.com/fzaninotto/Faker" %}
 
-## Phinx
+### Phinx
 
 {% embed url="https://book.cakephp.org/phinx/0/en/migrations.html" %}
 
@@ -24,7 +24,7 @@ new file
 
 change\(\) 와 up/down\(\)은 같이 있을 수 없다. up/down이 필요한경우에는 따로 파일
 
-### up\(\) 사용예
+#### up\(\) 사용예
 
 ```php
 // execute()
@@ -35,7 +35,7 @@ $stmt = $this->query('SELECT * FROM users'); // returns PDOStatement
 $rows = $stmt->fetchAll(); // returns the result as an array
 ```
 
-### Seed
+#### Seed
 
 phinx seed:create UserSeeder   
 phinx seed:run
