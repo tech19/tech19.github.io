@@ -21,5 +21,13 @@ _Crop Tool_ 을 선택하구요. 단축키는 'C' 자를 곳을 선택하고 선
 
 ## 반복작업: Actions
 
-[http://guthyuna.tistory.com/83?category=313923](http://guthyuna.tistory.com/83?category=313923) open image open Action panel create new set create new action: function key set begin recording stop recording play selection or function key [참고: https://m.blog.naver.com/PostList.nhn?blogId=phominator](https://m.blog.naver.com/PostList.nhn?blogId=phominator)
+[http://guthyuna.tistory.com/83?category=313923](http://guthyuna.tistory.com/83?category=313923)   
+open image   
+open Action panel   
+create new set   
+create new action: function key set   
+begin recording   
+stop recording   
+play selection or function key   
+[참고: https://m.blog.naver.com/PostList.nhn?blogId=phominator](https://m.blog.naver.com/PostList.nhn?blogId=phominator)
 

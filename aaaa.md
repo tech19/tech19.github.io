@@ -27,16 +27,25 @@ image lightbox? with image max width
 
 ## xdebug profiling
 
-xdebug.profiler\_enable=1; xdebug.profiler\_output\_dir = "c:\xampp\tmp" xdebug.profiler\_output\_name = "cachegrind.out.%t-%s" tools &gt; Analyze xdebug profile snapshot or Webgrind: github\(jokkedk/webgrind\)
+xdebug.profiler\_enable=1;   
+xdebug.profiler\_output\_dir = "c:\xampp\tmp"   
+xdebug.profiler\_output\_name = "cachegrind.out.%t-%s"   
+tools &gt; Analyze xdebug profile snapshot   
+or Webgrind: github\(jokkedk/webgrind\)
 
 ## curl + https problem
 
 download: curl-7.56.1-win64-mingw.7z extract: c:\aaa\curl\  
-curl.exe, curl-ca-bundle.crt add path: C:\aaa\curl;
+    curl.exe, curl-ca-bundle.crt   
+add path: C:\aaa\curl;
 
 ## error log
 
-use function -&gt; error\_log\(message,type,destination,headers\); \[php.ini\] error\_log = php\_errors.log error\_log="C:\xampp\tmp\php\_error\_log" with mtail.exe
+use function -&gt; error\_log\(message,type,destination,headers\);   
+\[php.ini\]   
+error\_log = php\_errors.log   
+error\_log="C:\xampp\tmp\php\_error\_log"   
+with mtail.exe
 
 * Infinite Scroll
 * Masonry
@@ -49,11 +58,15 @@ use function -&gt; error\_log\(message,type,destination,headers\); \[php.ini\] e
 
 Create ads.js file within var canRunAds = true;
 
-  
-        if\(window.canRunAds === undefined\){  
-            //adblock detected  
-        }  
-    
+```php
+<body>
+	<script>
+		if(window.canRunAds === undefined){
+			//adblock detected
+		}
+	</script>
+</body>
+```
 
 ## phpFastCache
 
@@ -104,11 +117,23 @@ $fastCache = phpFastCache("files", array("htaccess" => true,"path" => " booster"
 
 compress text, html, javascript, css, xml:
 
-AddOutputFilterByType DEFLATE text/plain AddOutputFilterByType DEFLATE text/html AddOutputFilterByType DEFLATE text/xml AddOutputFilterByType DEFLATE text/css AddOutputFilterByType DEFLATE application/xml AddOutputFilterByType DEFLATE application/xhtml+xml AddOutputFilterByType DEFLATE application/rss+xml AddOutputFilterByType DEFLATE application/javascript AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE text/plain   
+AddOutputFilterByType DEFLATE text/html   
+AddOutputFilterByType DEFLATE text/xml   
+AddOutputFilterByType DEFLATE text/css   
+AddOutputFilterByType DEFLATE application/xml   
+AddOutputFilterByType DEFLATE application/xhtml+xml   
+AddOutputFilterByType DEFLATE application/rss+xml   
+AddOutputFilterByType DEFLATE application/javascript   
+AddOutputFilterByType DEFLATE application/x-javascript
 
 Or, compress certain file types by extension:
 
- SetOutputFilter DEFLATE
+```php
+<files *.html>
+SetOutputFilter DEFLATE
+</files>
+```
 
 ## jQuery UI Sortable
 
@@ -118,13 +143,21 @@ Or, compress certain file types by extension:
 
 [https://getgrav.org/](https://getgrav.org/)
 
-git phpstorm youtube react lazy loading html compress steemit design Heroku gg map crud, pw, reset pw, cmd sel sunra domparse, sel, sel gut typesource: text in image, banner
+git phpstorm youtube   
+react lazy loading   
+html compress   
+steemit design   
+Heroku   
+gg map   
+crud, pw, reset pw, cmd   
+sel sunra domparse, sel, sel gut   
+typesource: text in image, banner
 
-[https://github.com/eisbehr-/jquery.lazy](https://github.com/eisbehr-/jquery.lazy) !!! [https://github.com/ressio/lazy-load-xt/](https://github.com/ressio/lazy-load-xt/) old
+[https://github.com/eisbehr-/jquery.lazy](https://github.com/eisbehr-/jquery.lazy) !!!   
+[https://github.com/ressio/lazy-load-xt/](https://github.com/ressio/lazy-load-xt/) old
 
-[https://lobianijs.com/site/lobipanel](https://lobianijs.com/site/lobipanel):min, max bootstrap panel, unpin dragable
-
-## webframeworks.kr       code example
+[https://lobianijs.com/site/lobipanel](https://lobianijs.com/site/lobipanel):min, max bootstrap panel, unpin dragable  
+webframeworks.kr       code example
 
 ## hash password
 

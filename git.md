@@ -16,17 +16,11 @@ toc: true
 * revert: remain in history, to target any one individual commit
 * checkout: HEAD no longer points to a branch—it points directly to a commit
 
-  git checkout a1e8fb5
+  git checkout a1e8fb5  
+    Nothing you do in here will be saved in your repository
 
-  ```text
-  Nothing you do in here will be saved in your repository
-  ```
-
-  git checkout master
-
-  ```text
-  get back to the “current” state of your project
-  ```
+  git checkout master  
+    get back to the “current” state of your project
 
 * reset: only work backward from the current commit
 * clean: for undoing changes to the working directory

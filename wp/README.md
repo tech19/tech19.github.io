@@ -33,13 +33,15 @@ If your theme doesn't use that function to display the comment form, you should 
 
 ### recaptcha test in localhost
 
-Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ\_MXjiZKhI Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ\_MXjiZKhI   
+Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 
 ### login
 
 ### front post add \(User Submitted posts plugin\)
 
-_? wordpress form 만들기_ [http://www.wpbeginner.com/wp-tutorials/how-to-allow-users-to-submit-posts-to-your-wordpress-site/](http://www.wpbeginner.com/wp-tutorials/how-to-allow-users-to-submit-posts-to-your-wordpress-site/)
+_? wordpress form 만들기_   
+[http://www.wpbeginner.com/wp-tutorials/how-to-allow-users-to-submit-posts-to-your-wordpress-site/](http://www.wpbeginner.com/wp-tutorials/how-to-allow-users-to-submit-posts-to-your-wordpress-site/)
 
 * no login
 * registered users

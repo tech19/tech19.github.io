@@ -16,7 +16,10 @@ Webpack:
 * copy & move
 * import css,js inside JS
 
-> entry one entry point per HTML page. SPA: one entry point, MPA: multiple entry points.
+> entry  
+> one entry point per HTML page.   
+> SPA: one entry point,   
+> MPA: multiple entry points.
 
 After entering the entry point, webpack will figure out which other modules and libraries that entry point depends on
 
@@ -49,27 +52,27 @@ After entering the entry point, webpack will figure out which other modules and 
 
 * node.js: install c:\Program Files\nodejs\node.exe seting: enable
 * npm: terminal: npm init -&gt; create package.json ? "main": "index.js" -&gt; default
-* package.json -&gt; \(npm\) devDependencies "babel-loader"  
-  "babel-preset-es2015" -&gt; es6를 es5로 "babel-polyfill" "webpack", "webpack-dev-server",
+* package.json -&gt; \(npm\)   
+  devDependencies   
+  "babel-loader"  
+  "babel-preset-es2015" -&gt; es6를 es5로   
+  "babel-polyfill"   
+  "webpack",   
+  "webpack-dev-server",  
+  "copy-webpack-plugin"  
+  "babel-core", "css-loader", "react", "react-dom", "react-hot-loader", "style-loader", "bable-preset-react",  
+  "react-table" 
 
-  ```text
-  "copy-webpack-plugin"
-  ------------------
-  "babel-core",
-  "css-loader",
-  "react",
-  "react-dom",
-  "react-hot-loader",
-  "style-loader",
-  "bable-preset-react",
-  -----------------
-  "react-table"
-  ```
+  scripts   
+    "build": "webpack",   
+    "watch": "webpack --watch",  
+  -&gt; Webpack에서 파일의 상태가 변경되면 자동으로 빌드   
+    "start": "webpack-dev-server --hot --inline"   
+    babel: {   
+      "presents": \[ "es2015", "react" \]   
+    },
 
-  scripts "build": "webpack", "watch": "webpack --watch",  
-  -&gt; Webpack에서 파일의 상태가 변경되면 자동으로 빌드 "start": "webpack-dev-server --hot --inline" babel: { "presents": \[ "es2015", "react" \] },
-
-* webpack.config.js \(to use other name file use --config\) var dir\_js = ... var dir\_build = module.exports = { entry: ..., output: { path: \_\_dirname + '/js/', filename: 'bundle.js' }, module: { loaders: \[ { loader: 'babel-loader', test: dir\_js, -&gt; what transfile, .css, .jsx test: /.jsx?$/, exclude: /\(node\_modules\)/, } \] }, pulgins: \[ .... \], devtool: 'source-map', devServer: { ... }, };
+* webpack.config.js \(to use other name file use --config\)  var dir\_js = ...  var dir\_build =  module.exports = {    entry: ...,    output: {      path: \_\_dirname + '/js/',      filename: 'bundle.js'    },    module: {      loaders: \[          {            loader: 'babel-loader',            test: dir\_js, -&gt; what transfile, .css, .jsx            test: /.jsx?$/,            exclude: /\(node\_modules\)/,          }      \]  },  pulgins: \[    ....  \],  devtool: 'source-map',  devServer: {      ...  },  };
 
 ## Es6 문법
 

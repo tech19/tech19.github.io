@@ -116,5 +116,33 @@ Php Inspections \(EA Extended\): need to install??
 * go to Ctrl+B \|\| Ctrl+click \(go to Declaration, brief info, tool tip\) Ctrl+N \(go to class\) Ctrl+Shift+N \(go to file\) Ctrl+Alt+Shift+N \(go to symbol\) Ctrl + F12 \(method list popup in class\)
 * editor, tool window ESC \(back to editor\) F12 \(last used tool\) Shift+ESC \(hide tool and go to editor\) Alt+ESC \(close tool and go to editor\) shift + ctr + F12: \(close all tool, only editor\)
 
-Multicoursor: Alt + Click Find usage: Alt + F7 Jump to syntac error: F2, shift + F2 View inheritance hierarchy: Ctrl + H Code completion: Ctrl + space Complete current statement\(if, try,…\): Ctrl + shift + enter Rename: shift + F6 Column mode: Alt + shift + insert Show option for error: Alt + enter ex. RegExp: regular expression editor Double click\(select\): Ctrl + w \*\*?? ?? Code format: Ctrl + alt + L Code bookmark ctrl + F11: set F11: set shift + F11: view all Select text, word, line text: ctrl + shift &lt;-, ctrl + shift + -&gt; line: home / end\(cursor move\), shift + home/end\(select\) Focus to the editor back: Esc Last used tool: F12 Hide tool: shift + Esc Close tool: alt + Esc Open brief info\(tool tip\): ctrl + click Go def? ?? ??: ctrl + click = ctrl + B Open quick definition window: ctrl + shift + i Open view doc window: ctrl + Q Tab, reverseTab: shift + Tab
+Multicoursor: Alt + Click   
+Find usage: Alt + F7   
+Jump to syntac error: F2, shift + F2   
+View inheritance hierarchy: Ctrl + H   
+Code completion: Ctrl + space   
+Complete current statement\(if, try,…\): Ctrl + shift + enter   
+Rename: shift + F6   
+Column mode: Alt + shift + insert   
+Show option for error: Alt + enter   
+ex. RegExp: regular expression editor   
+extend selection \(shrink selection\): Ctrl + w &lt;=&gt; Ctrl + shift + w   
+Code format: Ctrl + alt + L   
+Code bookmark: ctrl + F11: set F11: set shift + F11: view all   
+Select text, word, line   
+text: ctrl + shift &lt;-, ctrl + shift + -&gt;   
+line: home / end\(cursor move\), shift + home/end\(select\)   
+Focus to the editor back: Esc   
+Last used tool: F12   
+Hide tool: shift + Esc   
+Close tool: alt + Esc   
+Open brief info\(tool tip\): ctrl + click   
+Go def? ?? ??: ctrl + click = ctrl + B   
+Open quick definition window: ctrl + shift + i   
+Open view doc window: ctrl + Q   
+Tab, reverseTab: shift + Tab
+
+### remote PHP interpreter 를 쓸려면
+
+CLI interpreter를 add FROM vagrant, docker, VM\(virtual machine\), Remote server\(with ftp, sftp, or local\) --&gt; 그러면 로컬에 파일을 카피
 

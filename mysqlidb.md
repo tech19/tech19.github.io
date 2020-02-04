@@ -19,20 +19,25 @@ inside function: $db = MysqliDb::getInstance();
 
 * multi insert
 
-  \`\`\`php
-
-  $ids = $db-&gt;insertMulti\('users', $data\); //implode\(', ', $ids\);
-
-$keys = Array\("login", "firstName", "lastName"\); $ids = $db-&gt;insertMulti\('users', $data, $keys\);
-
-```text
-- insert update with mysql data function
+```php
+$ids = $db->insertMulti('users', $data); //implode(', ', $ids);
+$keys = Array("login", "firstName", "lastName"); 
+$ids = $db->insertMulti('users', $data, $keys);
 ```
 
-use db function: 'password' =&gt; $db-&gt;func\('SHA1\(?\)',Array \("secretpassword+salt"\)\), 'createdAt' =&gt; $db-&gt;now\(\), 'expires' =&gt; $db-&gt;now\('+1Y'\) 'editCount' =&gt; $db-&gt;inc\(2\), 'active' =&gt; $db-&gt;not\(\)
+* insert update with mysql data function
 
 ```text
-- insert with on duplicate key update
+use db function: 
+		'password' => $db->func('SHA1(?)',Array ("secretpassword+salt")),
+		'createdAt' => $db->now(),
+		'expires' => $db->now('+1Y')
+		'editCount' => $db->inc(2),
+		'active' => $db->not()
+```
+
+* insert with on duplicate key update
+
 ```php
 $data = Array ("login" => "admin",
                "firstName" => "John",
@@ -68,16 +73,15 @@ $db->loadXML("users", $path_to_file, $options);
 
 * select just one row: getOne\(\)
 
-  \`\`\`php
+```php
+$user = $db->getOne ("users");
+echo $user['id'];
+$stats = $db->getOne ("users", "sum(id), count(*) as cnt"); 
+echo "total ".$stats['cnt']. "users found";
+```
 
-  $user = $db-&gt;getOne \("users"\);
+* select one column value or function result
 
-  echo $user\['id'\];
-
-$stats = $db-&gt;getOne \("users", "sum\(id\), count\(\*\) as cnt"\); echo "total ".$stats\['cnt'\]. "users found";
-
-```text
-- select one column value or function result
 ```php
 $count = $db->getValue ("users", "count(*)");
 ```
@@ -91,7 +95,7 @@ $count = $db->getValue ("users", "count(*)");
     echo $login;
   ```
 
-  **Result transformation / map**
+### **Result transformation / map**
 
 ```php
 $user = $db->map ('login')->ObjectBuilder()->getOne ('users', 'id,login,createdAt');
@@ -109,7 +113,7 @@ Array
 
 ## return type
 
-```text
+```php
 $json = $db->JsonBuilder()->getOne("users");
 ```
 
