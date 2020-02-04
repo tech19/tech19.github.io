@@ -11,7 +11,6 @@ toc: true
 
 ### condition
 
-* php 7.0 OVER
 * assume the **User** model stores records in the **users** table
 * assume that each table has a primary key column named **id**
 * updated\_at, created\_at: do not wish -&gt; $timestamps property on your model to false
@@ -29,7 +28,7 @@ toc: true
 ```php
 $app->get('/ccc/{id}', '\xxxController:bbb')->setName('aaa');
 // redirect with attribute
-eturn $response->withRedirect($this->router->pathFor('aaa', ['id' => 0]));  // id is in route
+return $response->withRedirect($this->router->pathFor('aaa', ['id' => 0]));  // id is in route
 ```
 
 ### Select
@@ -125,7 +124,7 @@ Capsule::schema()->create('users', function ($table) {
 });
 ```
 
-### Inserte
+### Insert
 
 1. save method
 
@@ -231,7 +230,7 @@ class User extends Illuminate\Database\Eloquent\Model {}
 $users = User::where('votes', '>', 1)->get();
 ```
 
-### two connection
+### Multiple DB
 
 ```php
 $capsule->addConnection($container['settings']['db']);

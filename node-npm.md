@@ -11,10 +11,7 @@ toc: true
 
 # node npm
 
-npm install -h: isntall할 때 쓸 수 있는 명령어 list
-
-ex\) “bcrypt”: “^0.8.3" ::  
-^를 입력하면 major release를 바꾸지 않고 최대한 \(minor release를 최대한 Update ~0.8.3이라고 써져있다면 patch release만 최대한 update 하겠다는 의미
+npm install -h: install할 때 쓸 수 있는 명령어 list
 
 `-g` `--save` `--dev`
 

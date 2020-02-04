@@ -17,47 +17,34 @@ else ob_start();
 mod_defalte
 ```
 
-## phpFastCache
+### phpFastCache
+
+{% hint style="info" %}
+composer require phpfastcache/phpfastcache
+{% endhint %}
+
+**event :** when something is deleted from the cache, you could catch this event and refresh or delete related data as well
+
+[https://code.tutsplus.com/tutorials/boost-your-website-performance-with-phpfastcache--cms-31031](https://code.tutsplus.com/tutorials/boost-your-website-performance-with-phpfastcache--cms-31031)
 
 ```php
-    // In your config file
-    include("php_fast_cache.php");
-    phpFastCache::$storage = "auto";
-    // you can set it to files, apc, memcache, memcached, pdo, or wincache
-    // I like auto
-
-    // In your Class, Functions, PHP Pages
-    // try to get from Cache first.
-    $products = phpFastCache::get("products_page");
-
-    if($products == null) {
-        $products = YOUR DB QUERIES || GET_PRODUCTS_FUNCTION;
-        // set products in to cache in 600 seconds = 5 minutes
-        phpFastCache::set("products_page",$products,600);
-    }
-
-   OUTPUT or RETURN your $products
-```
-
-[https://www.devildoxx.com/web-development/php-tutorials/phpfastcache-tutorials/configuring-phpfastcache/](https://www.devildoxx.com/web-development/php-tutorials/phpfastcache-tutorials/configuring-phpfastcache/)
-
-```php
-//phpFastCache(xxx), phpFastCache::set(xxx)
-class mycache {
-    public static $cache = array();
+// directory writable by the web server, 775
+CacheManager::setDefaultConfig([
+  "path" => __DIR__ . "/cache"
+]);
+$objFilesCache = CacheManager::getInstance('files');
+$key = "home_page";
+$CachedString = $objFilesCache->getItem($key);
+if (!$CachedString->isHit()))
+{
+    $numberOfSeconds = 60;
+    $CachedString->set("a")->expiresAfter($numberOfSeconds);
+    $objFilesCache->save($CachedString);
 }
-mycache::$cache['my_cache_name'] = phpFastCache(whatever);
-
-//In your function, class, do call:
-$fastCache = mycache::$cache['my_cache_name'] ;
-phpFastCache::set("products_page",$products,600);
-$products = phpFastCache::get("products_page");
-$fastCache = phpFastCache("files", array("htaccess" => true,"path" => " booster","securityKey" => "auto"));   // config options
+$result = $CachedString->get();
 ```
 
-1. create folder: booster
-
-## GZIP Compression
+### GZIP Compression
 
 * header: Content-encoding: gzip
 * Setting up the server
