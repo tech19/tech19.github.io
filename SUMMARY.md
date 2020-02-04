@@ -11,6 +11,7 @@
 * [code function](code-function.md)
 * [git](2018-06-06-git.md)
 * [javascript](2018-06-06-javascript.md)
+* [Laravel](laravel.md)
 * [node npm](node-npm.md)
 * [mysql](2018-06-06-mysql/README.md)
   * [Foreign Key](2018-06-06-mysql/mysql.md)
