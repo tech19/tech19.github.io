@@ -6,7 +6,8 @@ authentication
 routing  
 sessions  
 caching  
-translation
+translation  
+migrate
 
 psm supported by laravel plugin and laravel-ide-helper below
 
@@ -64,5 +65,74 @@ psm supported by laravel plugin and laravel-ide-helper below
 그냥 phpstorm에 관한설명
 {% endhint %}
 
+## User / Admin
 
+❤ a make:auth
+
+❤ a make:migration create\_admins\_table --create=admins
+
+❤ a migrate
+
+❤ make admin model manually by coping User.php
+
+❤ config admin guard   
+\[ config/auth.php\]
+
+```php
+//   config/auth.php
+'defaults' => [
+        'guard' => 'web',
+        'passwords' => 'users',
+],
+// below use defaults guard
+// Auth::check($a);
+// Auth::attempt($a);
+// to use specific guard
+// Auth::guard('admin)->check($a);
+'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+],
+'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
+],
+```
+
+\[ Admin.php\]
+
+```php
+protected $guard = 'admin';
+```
+
+\[ AdminController.php\]
+
+```php
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+```
+
+\[redirect to login\]
+
+\[admin login\]
+
+❤ a make:controller Auth/AdminLoginController  
+trait AuthenticatesUsers 참고로
 
