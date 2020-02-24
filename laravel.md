@@ -73,7 +73,12 @@ psm supported by laravel plugin and laravel-ide-helper below
 
 ❤ a migrate
 
-❤ make admin model manually by coping User.php
+❤ make admin model manually by coping User.php  
+\[ Admin.php\]  ??
+
+```php
+protected $guard = 'admin';
+```
 
 ❤ config admin guard   
 \[ config/auth.php\]
@@ -114,13 +119,9 @@ psm supported by laravel plugin and laravel-ide-helper below
 ],
 ```
 
-\[ Admin.php\]
+❤ /admin 밑에 HomeController만들고, web.php에 get route만들고
 
-```php
-protected $guard = 'admin';
-```
-
-\[ AdminController.php\]
+라우트에 쓸 controller 중에 admin 권한을 필요로 할때 아래의 middleware 로 
 
 ```php
     public function __construct()
@@ -129,10 +130,11 @@ protected $guard = 'admin';
     }
 ```
 
-\[redirect to login\]
+\[redirect to admin login\]
 
-\[admin login\]
+\[admin login: form, process\]
 
 ❤ a make:controller Auth/AdminLoginController  
-trait AuthenticatesUsers 참고로
+trait AuthenticatesUsers 참고로  
+Auth를 admin 밑에 두면 user에서 쓰는파일이름을 그대로 쓸수있다.
 
