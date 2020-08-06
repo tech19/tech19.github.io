@@ -26,6 +26,7 @@ use function:  **error\_log**\(message,type,destination,headers\);
 \[php.ini\]   
 error\_log = php\_errors.log   
 error\_log="C:\xampp\tmp\php\_error\_log"   
+or error\_log="C:\xampp73\php\logs\php\_error\_log"  
 with **mtail.exe**
 
 ```php
