@@ -19,11 +19,7 @@ toc: true
 ### creates configuration file "codeception.yml" and tests directory
 
 * with terminal: run **codecept  bootstrap**
-* **/tests** folder you will have three .yml config files and three directories with names corresponding to these suites: unit, functional, acceptance
-
-tests/acceptance.suite.yml  
-tests/functional.suite.yml  
-tests/unit.suite.yml
+* **/tests** folder you will have three .yml config files and three directories with names corresponding to these suites: unit, functional, acceptance  tests/acceptance.suite.yml tests/functional.suite.yml tests/unit.suite.yml
 
 ### create unit test \(class...\)
 
@@ -142,7 +138,7 @@ Open quick definition window: ctrl + shift + i
 Open view doc window: ctrl + Q   
 Tab, reverseTab: shift + Tab
 
-### remote PHP interpreter 를 쓸려면
+## remote PHP interpreter 를 쓸려면
 
 CLI interpreter를 add FROM vagrant, docker, VM\(virtual machine\), Remote server\(with ftp, sftp, or local\) --&gt; 그러면 로컬에 파일을 카피
 
