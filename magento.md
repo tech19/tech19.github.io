@@ -20,7 +20,7 @@ OAuth 1.0 protocol to provide authentication System \| Web Services \| REST - OA
 
 ```php
 $callbackUrl = "http://magento.localhost.com/oauth_admin.php";
-$temporaryCredentialsRequestUrl = "http://magento.localhost.com/oauth/initiate?oauth_callback=" . urlencode($callbackUrl);
+$temporaryCredentialsRequestUrl = "http://magento.localhost.com/oauth/ initiate?oauth_callback=" . urlencode($callbackUrl);
 // /oauth/initiate :: WILL RETURN oauth_token, oauth_token_secret
 
 $adminAuthorizationUrl = 'http://magento.localhost.com/admin/oAuth_authorize';

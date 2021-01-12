@@ -65,6 +65,20 @@ create controller:  php artisan make:controller HomeController
 
 👀 blade 파일안에 그냥 php code를 써도 되나? blade 문법말고 👀
 
+[https://laravel.com/docs/8.x/blade\#raw-php](https://laravel.com/docs/8.x/blade#raw-php)
+
+```bash
+@php
+  
+$title = "How to Write PHP Code in Laravel Blade? - ItSolutionStuff.com";
+  
+$myArray = ['id'=>1,'name'=>'Hardik'];
+  
+@endphp
+  
+<h1>{{ $title }}</h1>
+```
+
 
 
 
