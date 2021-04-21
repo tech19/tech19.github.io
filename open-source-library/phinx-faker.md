@@ -4,7 +4,7 @@ permalink: /php-library/
 toc: true
 ---
 
-# phinx faker
+# open source library - phinx faker
 
 ## generates fake data
 

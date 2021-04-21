@@ -41,6 +41,7 @@ function sanitize($string, $force_lowercase = true, $anal = false) {
 ### hash password
 
 ```php
+// smtop: UserController.php
 $hashed_password = password_hash('mypassword', PASSWORD_DEFAULT);
 echo $hashed_password;
 if (hash_equals($hashed_password, crypt('mypassword', $hashed_password))) {
