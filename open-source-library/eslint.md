@@ -7,7 +7,7 @@ tags:
 toc: true
 ---
 
-# open source library - eslint
+# eslint
 
 npm install -D eslint
 
