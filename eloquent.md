@@ -1,29 +1,20 @@
----
-title: eloquent
-categories:
-  - orm
-tags:
-  - eloquent
-toc: true
----
-
 # eloquent
 
 ### condition
 
 * assume the **User** model stores records in the **users** table
 * assume that each table has a primary key column named **id**
-* updated\_at, created\_at: do not wish -&gt; $timestamps property on your model to false
-* incrementing property on your model to false. ??
+* updated\_at, created\_at: do not wish -> $timestamps property on your model to false
+*   incrementing property on your model to false. ??
 
-  ```php
-  class User extends Model {
-    protected $table = 'my_users';
-    // primaryKey
-  }
-  ```
+    ```php
+    class User extends Model {
+      protected $table = 'my_users';
+      // primaryKey
+    }
+    ```
 
-  **pathFor**
+    **pathFor**
 
 ```php
 $app->get('/ccc/{id}', '\xxxController:bbb')->setName('aaa');
@@ -74,7 +65,7 @@ foreach ($titles as $title) {
 }
 ```
 
-You may also specify a custom key column for the returned array: $roles = DB::table\('roles'\)-&gt;lists\('title', 'name'\); foreach \($roles as $name =&gt; $title\) { echo $title; }
+You may also specify a custom key column for the returned array: $roles = DB::table('roles')->lists('title', 'name'); foreach ($roles as $name => $title) { echo $title; }
 
 ```php
 User::chunk(200, function($users){}
@@ -91,7 +82,7 @@ $user->touch(); // update timestamps
 
 Soft Deleting use SoftDeletes;
 
-### Create Table For Migration: schema\(\)
+### Create Table For Migration: schema()
 
 First create a new folder and name it “database”. Now, create a new file for the users table and name it “User.php”.
 
@@ -126,27 +117,25 @@ Capsule::schema()->create('users', function ($table) {
 
 ### Insert
 
-1. save method
+1.  save method
 
-   ```php
-   $flight = new Flight;
-   $flight->name = $request->name;
-   $flight->save();
-   ```
+    ```php
+    $flight = new Flight;
+    $flight->name = $request->name;
+    $flight->save();
+    ```
+2.  create method : **with fillable, guarded attribute in Model**
 
-2. create method : **with fillable, guarded attribute in Model**
+    ```php
+    protected $fillable = ['name'];
+    ...  
+    $flight = Flight::create(['name' => 'Flight 10']);
+    ```
+3.  **firstOrCreate**, firstOrNew
 
-   ```php
-   protected $fillable = ['name'];
-   ...  
-   $flight = Flight::create(['name' => 'Flight 10']);
-   ```
-
-3. **firstOrCreate**, firstOrNew
-
-   ```php
-   $flight = App\Flight::firstOrCreate(['name' => 'Flight 10']);
-   ```
+    ```php
+    $flight = App\Flight::firstOrCreate(['name' => 'Flight 10']);
+    ```
 
 If the model can not be found in the database, a record will be inserted with the given attributes.
 
@@ -158,22 +147,20 @@ if a model is not found, a new model instance will be returned. Note that the mo
 
 ### Update
 
-1. Save method
+1.  Save method
 
-   ```php
-   $flight = new Flight;
-   $flight->name = $request->name;
-   $flight->save();
-   ```
+    ```php
+    $flight = new Flight;
+    $flight->name = $request->name;
+    $flight->save();
+    ```
+2.  Update method with query?
 
-2. Update method with query?
-
-   ```php
-   Flight::where('active', 1)
-   ->where('destination', 'San Diego')
-           ->update(['delayed' => 1]);
-   ```
-
+    ```php
+    Flight::where('active', 1)
+    ->where('destination', 'San Diego')
+            ->update(['delayed' => 1]);
+    ```
 3. updateOrCreate
 
 ```php
@@ -187,9 +174,9 @@ $flight = App\Flight::updateOrCreate(
 
 ### Delete
 
-1. Load, find and delete\(\)
-2. With primary key, don’t need find, just destroy\(id\)
-3. With query result -&gt; delete\(\)
+1. Load, find and delete()
+2. With primary key, don’t need find, just destroy(id)
+3. With query result -> delete()
 
 ### Scope
 
@@ -215,7 +202,7 @@ $users = App\User::popular()->active()->orderBy('created_at')->get();
 
 ### Globally with static method
 
-ex\)
+ex)
 
 ```php
 $capsule-\>setAsGlobal();
@@ -249,9 +236,9 @@ $capsule->getConnection('**db_second**');
 
 ### many to many
 
-Q. need foreign key setting in DB -&gt; Q. delete user then 'on cascade' work automatically
+Q. need foreign key setting in DB -> Q. delete user then 'on cascade' work automatically
 
-> create and attach\(detach\) relationship in the map table
+> create and attach(detach) relationship in the map table
 
 ```php
 $user = new \Mj\User();
@@ -327,4 +314,3 @@ if ($someCondition) {
     $books->load('author', 'publisher');
 }
 ```
-

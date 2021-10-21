@@ -1,12 +1,3 @@
----
-title: validation
-categories:
-  - validation
-tags:
-  - validation
-toc: true
----
-
 # validation
 
 ## jquery validation
@@ -278,4 +269,3 @@ $("#record_form").validate({
 ```
 
 ## Serverside: valitron
-

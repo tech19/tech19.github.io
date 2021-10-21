@@ -1,12 +1,3 @@
----
-title: javascript
-categories:
-  - javascript
-tags:
-  - javascript
-toc: true
----
-
 # javascript
 
 ## pass data to js file via script tag
@@ -45,4 +36,3 @@ function(a,b){}(aobject, bobject));
     b.appendChild(s);
 }(window, document));
 ```
-

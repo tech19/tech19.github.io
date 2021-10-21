@@ -1,12 +1,3 @@
----
-title: function
-categories:
-  - function
-tags:
-  - function
-toc: true
----
-
 # code function
 
 ### safe url string
@@ -121,6 +112,13 @@ if (isset($_SERVER['HTTP_CLIENT_IP']))
 
 ### 한글 사이트 검사
 
-1. EUC-KR인 경우  if\(preg\_match\("/\[\xA1-\xFE\]\[\xA1-\xFE\]/", $str\)\)   echo "한글포함.";  else    echo "한글없음";
-2. UTF-8인 경우  if\(preg\_match\("/\[\xE0-\xFF\]\[\x80-\xFF\]\[\x80-\xFF\]/", $str\)\)   echo "한글포함.";  else    echo "한글없음";
-
+1. EUC-KR인 경우 \
+   if(preg\_match("/\[\xA1-\xFE]\[\xA1-\xFE]/", $str))\
+   &#x20; echo "한글포함."; \
+   else \
+   &#x20; echo "한글없음";
+2. UTF-8인 경우 \
+   if(preg\_match("/\[\xE0-\xFF]\[\x80-\xFF]\[\x80-\xFF]/", $str))\
+   &#x20; echo "한글포함."; \
+   else \
+   &#x20; echo "한글없음";

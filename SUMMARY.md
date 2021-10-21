@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Initial page](README.md)
-* [aaaa](aaaa.md)
 * [composer](composer.md)
 * [css](css.md)
 * [code function](code-function.md)
@@ -34,7 +33,6 @@
 * [vagrant](vagrant.md)
 * [wordpress](2018-06-06-wp/README.md)
   * [avada](2018-06-06-wp/avada.md)
-  * [remove website\(url\) in comment input field](2018-06-06-wp/wphook.md)
+  * [remove website(url) in comment input field](2018-06-06-wp/wphook.md)
 * [webpack-es6](webpack-es6.md)
 * [woocommerce](woocommerce.md)
-

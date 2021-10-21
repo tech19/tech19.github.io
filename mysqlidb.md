@@ -1,17 +1,8 @@
----
-title: mysqliDB
-categories:
-  - mysql
-tags:
-  - mysqliDB
-toc: true
----
-
 # mysqliDB
 
 ## static instance
 
-```text
+```
 inside function: $db = MysqliDb::getInstance();
 ```
 
@@ -27,7 +18,7 @@ $ids = $db->insertMulti('users', $data, $keys);
 
 * insert update with mysql data function
 
-```text
+```
 use db function: 
 		'password' => $db->func('SHA1(?)',Array ("secretpassword+salt")),
 		'createdAt' => $db->now(),
@@ -64,14 +55,13 @@ $db->loadXML("users", $path_to_file, $options);
 
 ## select
 
-* select with custom columns set
+*   select with custom columns set
 
-  ```php
-  $cols = Array ("id", "name", "email");
-  $users = $db->get ("users", null, $cols);
-  ```
-
-* select just one row: getOne\(\)
+    ```php
+    $cols = Array ("id", "name", "email");
+    $users = $db->get ("users", null, $cols);
+    ```
+* select just one row: getOne()
 
 ```php
 $user = $db->getOne ("users");
@@ -86,14 +76,14 @@ echo "total ".$stats['cnt']. "users found";
 $count = $db->getValue ("users", "count(*)");
 ```
 
-* select one column value or function result from multiple rows
+*   select one column value or function result from multiple rows
 
-  ```php
-  $logins = $db->getValue ("users", "login", 5);
-  // select login from users limit 5
-  foreach ($logins as $login)
-    echo $login;
-  ```
+    ```php
+    $logins = $db->getValue ("users", "login", 5);
+    // select login from users limit 5
+    foreach ($logins as $login)
+      echo $login;
+    ```
 
 ### **Result transformation / map**
 
@@ -166,4 +156,3 @@ if(!$id)
 else
     $output = ['uploaded' => 'OK'];
 ```
-

@@ -1,11 +1,5 @@
 ---
-title: magento
-categories:
-  - magento
-tags:
-  - magento
-toc: true
-description: 'restful API, "FROM OUTSIDE OF SERVER"'
+description: restful API, "FROM OUTSIDE OF SERVER"
 ---
 
 # Magento
@@ -16,7 +10,7 @@ description: 'restful API, "FROM OUTSIDE OF SERVER"'
 
 ## Setting up the REST API credentials
 
-OAuth 1.0 protocol to provide authentication System \| Web Services \| REST - OAuth Consumers, and selecting Add New in the Admin panel
+OAuth 1.0 protocol to provide authentication System | Web Services | REST - OAuth Consumers, and selecting Add New in the Admin panel
 
 ```php
 $callbackUrl = "http://magento.localhost.com/oauth_admin.php";
@@ -79,11 +73,11 @@ $updatedProduct = json_decode($oauthClient- >getLastResponseInfo());
 
 ## Steps
 
-Registering an Application: to get consumer Key and Secret 받고, -&gt; System &gt; Web Services &gt; REST - OAuth Consumers and clicking Add New in the Admin Panel. When registering the application, you also need to define the callback URL
+Registering an Application: to get consumer Key and Secret 받고, -> System > Web Services > REST - OAuth Consumers and clicking Add New in the Admin Panel. When registering the application, you also need to define the callback URL
 
 ## Guzzle for magento
 
-[http://devdocs.magento.com/guides/m1x/api/rest/introduction.html\#RESTAPIIntroduction-ProductCategories](http://devdocs.magento.com/guides/m1x/api/rest/introduction.html#RESTAPIIntroduction-ProductCategories)
+[http://devdocs.magento.com/guides/m1x/api/rest/introduction.html#RESTAPIIntroduction-ProductCategories](http://devdocs.magento.com/guides/m1x/api/rest/introduction.html#RESTAPIIntroduction-ProductCategories)
 
 guzzle, gutte: Oauth composer require guzzlehttp/guzzle [https://hackernoon.com/creating-rest-api-in-php-using-guzzle-d6a890499b02](https://hackernoon.com/creating-rest-api-in-php-using-guzzle-d6a890499b02)
 
@@ -96,41 +90,39 @@ use GuzzleHttp\Psr7\Request;
 
 base URI, HTTP verb and headers If there is an authentication layer in the external API, you can also pass these parameters
 
-\*\* goutte: scrap, crawing -&gt;&gt; use guzzle
+\*\* goutte: scrap, crawing ->> use guzzle
 
-* set up Guzzle 
+*   set up Guzzle&#x20;
 
-  Admin =&gt; System =&gt; Extensions :: Integrations =&gt; Add New Integration  \(version 2 only?\)
+    Admin => System => Extensions :: Integrations => Add New Integration  (version 2 only?)
 
-  Consumer Key
+    Consumer Key
 
-  Consumer Secret
+    Consumer Secret
 
-  Access Token
+    Access Token
 
-  Access Token Secret
+    Access Token Secret
+*   guzzle
 
-* guzzle
+    ```php
+    $client = new GuzzleHttp\Client();
+    $res = $client->request(‘GET’, ‘https://api.cloudways.com/api/v1’, [
+      ‘headers’ => [
+          ‘Accept’ => ‘application/json’,
+          ‘Content-type’ => ‘application/json’
+      ]
+    ]);
+    ```
+*   "cpliakas/magento-client-php": "\*" /////////// test
 
-  ```php
-  $client = new GuzzleHttp\Client();
-  $res = $client->request(‘GET’, ‘https://api.cloudways.com/api/v1’, [
-    ‘headers’ => [
-        ‘Accept’ => ‘application/json’,
-        ‘Content-type’ => ‘application/json’
-    ]
-  ]);
-  ```
+    \`\`\`php use Magento\Client\Rest\MagentoRestClient;
 
-* "cpliakas/magento-client-php": "\*" /////////// test
+$client = MagentoRestClient::factory(array( 'base\_url' => '[http://magentohost](http://magentohost)', 'consumer\_key' => 'abc123...', 'consumer\_secret' => 'def456...', 'token' => 'ghi789...', 'token\_secret' => 'jkl012...', ));
 
-  \`\`\`php use Magento\Client\Rest\MagentoRestClient;
+$result = $client->get('/api/rest/products')->send()->json(); //// ->json ///
 
-$client = MagentoRestClient::factory\(array\( 'base\_url' =&gt; '[http://magentohost](http://magentohost)', 'consumer\_key' =&gt; 'abc123...', 'consumer\_secret' =&gt; 'def456...', 'token' =&gt; 'ghi789...', 'token\_secret' =&gt; 'jkl012...', \)\);
-
-$result = $client-&gt;get\('/api/rest/products'\)-&gt;send\(\)-&gt;json\(\); //// -&gt;json ///
-
-```text
+````
 ### 1.9  local
 Your License key is: 9559634d24ec1cc6437fc8bb6af14d9e    
 http://localhost.com/magento
@@ -228,5 +220,4 @@ function createCategory(){
 
             ->setCategoryIds(array(3, 7)); 
             $product->save();
-```
-
+````

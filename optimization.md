@@ -2,15 +2,15 @@
 
 ### List
 
-Combine css, js   
-Minification css, js, html Gzip   
-Asynchronous js   
-Optimize css delivery: eliminate css render-blocking ?   
-Optimize images CDN Lazy load images   
-Http 헤더 : expires, cache-control, if-modified-since   
+Combine css, js \
+Minification css, js, html Gzip \
+Asynchronous js \
+Optimize css delivery: eliminate css render-blocking ? \
+Optimize images CDN Lazy load images \
+Http 헤더 : expires, cache-control, if-modified-since \
 memcached, redis, oPcache, php7.2
 
-```text
+```
 if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) ob_start('ob_gzhandler');
 else ob_start();
 
@@ -23,7 +23,7 @@ mod_defalte
 composer require phpfastcache/phpfastcache
 {% endhint %}
 
-**event :** when something is deleted from the cache, you could catch this event and refresh or delete related data as well
+**event : **when something is deleted from the cache, you could catch this event and refresh or delete related data as well
 
 [https://code.tutsplus.com/tutorials/boost-your-website-performance-with-phpfastcache--cms-31031](https://code.tutsplus.com/tutorials/boost-your-website-performance-with-phpfastcache--cms-31031)
 
@@ -47,20 +47,20 @@ $result = $CachedString->get();
 ### GZIP Compression
 
 * header: Content-encoding: gzip
-* Setting up the server
+*   Setting up the server
 
-  In Apache, enabling output compression is fairly straightforward. Add the following to your .htaccess file:
+    In Apache, enabling output compression is fairly straightforward. Add the following to your .htaccess file:
 
 compress text, html, javascript, css, xml:
 
-AddOutputFilterByType DEFLATE text/plain   
-AddOutputFilterByType DEFLATE text/html   
-AddOutputFilterByType DEFLATE text/xml   
-AddOutputFilterByType DEFLATE text/css   
-AddOutputFilterByType DEFLATE application/xml   
-AddOutputFilterByType DEFLATE application/xhtml+xml   
-AddOutputFilterByType DEFLATE application/rss+xml   
-AddOutputFilterByType DEFLATE application/javascript   
+AddOutputFilterByType DEFLATE text/plain \
+AddOutputFilterByType DEFLATE text/html \
+AddOutputFilterByType DEFLATE text/xml \
+AddOutputFilterByType DEFLATE text/css \
+AddOutputFilterByType DEFLATE application/xml \
+AddOutputFilterByType DEFLATE application/xhtml+xml \
+AddOutputFilterByType DEFLATE application/rss+xml \
+AddOutputFilterByType DEFLATE application/javascript \
 AddOutputFilterByType DEFLATE application/x-javascript
 
 Or, compress certain file types by extension:
@@ -70,4 +70,3 @@ Or, compress certain file types by extension:
 SetOutputFilter DEFLATE
 </files>
 ```
-

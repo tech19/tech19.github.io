@@ -1,12 +1,3 @@
----
-title: github open source
-categories:
-  - open source
-tags:
-  - open source
-toc: true
----
-
 # open source library
 
 ### Date Time - Carbon
@@ -17,14 +8,14 @@ Carbon/Carbon
 
 {% embed url="https://github.com/gumlet/php-image-resize" %}
 
-* size on disk: 10k &lt;
-* 1267 x 903 : 가로 10 세로 7 
+* size on disk: 10k <
+* 1267 x 903 : 가로 10 세로 7&#x20;
 * bit depth: 32
 * 40%, 15%
-* 가로 &lt; 세로 =&gt; x
-* 1280 x 12...  =&gt; x
-* 1267 x 903 인데 그냥 하얀거 size가 10k &lt;
-* 긴거 -&gt; 짤라야
+* 가로 < 세로 => x
+* 1280 x 12...  => x
+* 1267 x 903 인데 그냥 하얀거 size가 10k <
+* 긴거 -> 짤라야
 
 ### Domain / url
 
@@ -204,13 +195,13 @@ function (dismiss) {
 
 ### bt datetime
 
-### excel, pdf \(php\)
+### excel, pdf (php)
 
 ### fullcalendar
 
 ### jq validate
 
-### bt upload \(fileinput\)
+### bt upload (fileinput)
 
 ### datatables
 
@@ -220,33 +211,32 @@ function (dismiss) {
 
 ### dragable, close button panel
 
-* [lobianijs](https://lobianijs.com/) \(admin panel\)
+* [lobianijs](https://lobianijs.com) (admin panel)
 
-Datetimepicker 
+Datetimepicker&#x20;
 
-moment 
+moment&#x20;
 
-bootstrap-fileinput 
+bootstrap-fileinput&#x20;
 
-jquery-pjax 
+jquery-pjax&#x20;
 
-Nestable 
+Nestable&#x20;
 
-toastr 
+toastr&#x20;
 
-bootstrap-number-input 
+bootstrap-number-input&#x20;
 
-fontawesome-iconpicker 
+fontawesome-iconpicker&#x20;
 
-Infinite Scroll 
+Infinite Scroll&#x20;
 
-Masonry 
+Masonry&#x20;
 
-Shopify/draggable 
+Shopify/draggable&#x20;
 
-ghostery 
+ghostery&#x20;
 
-Aura for php 
+Aura for php&#x20;
 
 blackfire: profiling
-

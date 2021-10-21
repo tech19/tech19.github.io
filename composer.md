@@ -1,17 +1,7 @@
----
-title: composer
-categories:
-  - composer
-tags:
-  - composer
-toc: true
----
-
 # composer
 
 ### optimize autoloader for production
 
-composer dump-autoload --optimize  
-OR  -o option   
+composer dump-autoload --optimize\
+OR  -o option \
 composer install /update -o
-

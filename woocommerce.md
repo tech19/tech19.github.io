@@ -1,18 +1,9 @@
----
-title: woocommerce
-categories:
-  - woocommerce
-tags:
-  - woocommerce
-toc: true
----
-
 # woocommerce
 
-[http://domain/wp-login.php?action=logout](http://domain/wp-login.php?action=logout)  
+[http://domain/wp-login.php?action=logout](http://domain/wp-login.php?action=logout)\
 [http://domain/wp-login.php?action=register](http://domain/wp-login.php?action=register)
 
-> Bypass "Are you sure you want to log out?" message in \(WooCommerce\) or not Removing logout confirmation
+> Bypass "Are you sure you want to log out?" message in (WooCommerce) or not Removing logout confirmation
 
 ```php
 add_action('wp_logout','logout_redirect');
@@ -36,20 +27,20 @@ add_filter('wp_nav_menu_objects', 'change_menu');
 
 #### Copy wp
 
-When and how to install wordpress in a subdirectory  
-File, db 넣고  
-wp-options table에 siteurl, home 바꾸고  
-Wp-config.php에 db 정보 바꾸고  
-Searchdb 를 실행하고   
-Settings &gt; Permalinks : save
+When and how to install wordpress in a subdirectory\
+File, db 넣고\
+wp-options table에 siteurl, home 바꾸고\
+Wp-config.php에 db 정보 바꾸고\
+Searchdb 를 실행하고 \
+Settings > Permalinks : save
 
 ### woocommerce rest api
 
-{% embed url="https://woocommerce.github.io/woocommerce-rest-api-docs/\#" %}
+{% embed url="https://woocommerce.github.io/woocommerce-rest-api-docs/#" %}
 
 > REST API keys
 
-1. WordPress admin interface WooCommerce &gt; Settings &gt; API &gt; Keys/Apps.
+1. WordPress admin interface WooCommerce > Settings > API > Keys/Apps.
 2. can be auto-generated through an endpoint
 
 > composer require automattic/woocommerce
@@ -70,4 +61,3 @@ $woocommerce = new Client(
     ]
 );
 ```
-

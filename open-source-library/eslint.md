@@ -1,13 +1,4 @@
----
-title: eslint
-categories:
-  - eslint
-tags:
-  - eslint
-toc: true
----
-
-# eslint
+# open source library - eslint
 
 npm install -D eslint
 
@@ -21,5 +12,4 @@ Successfully created .eslintrc.js file in C:\xampp\htdocs\news2quick2\node\_modu
 
 /node\_modules/.bin/eslint .eslintrc.js
 
-to use jquery\($\) in seperated javascript file: "env": { "browser": true, "commonjs": true, "es6": true, "node": true, "jquery": true },
-
+to use jquery($) in seperated javascript file: "env": { "browser": true, "commonjs": true, "es6": true, "node": true, "jquery": true },
