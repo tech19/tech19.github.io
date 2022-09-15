@@ -23,7 +23,7 @@ mod_defalte
 composer require phpfastcache/phpfastcache
 {% endhint %}
 
-**event : **when something is deleted from the cache, you could catch this event and refresh or delete related data as well
+**event :** when something is deleted from the cache, you could catch this event and refresh or delete related data as well
 
 [https://code.tutsplus.com/tutorials/boost-your-website-performance-with-phpfastcache--cms-31031](https://code.tutsplus.com/tutorials/boost-your-website-performance-with-phpfastcache--cms-31031)
 

@@ -16,7 +16,7 @@ After entering the entry point, webpack will figure out which other modules and 
 
 ## Phpstorm Webpack
 
-[https://www.jetbrains.com/help/phpstorm/2017.3/webpack.html?utm\_medium=help\_link\&utm\_source=from\_product\&utm\_campaign=PS\&utm\_content=2017.3](https://www.jetbrains.com/help/phpstorm/2017.3/webpack.html)
+[https://www.jetbrains.com/help/phpstorm/2017.3/webpack.html?utm\_medium=help\_link\&utm\_source=from\_product\&utm\_campaign=PS\&utm\_content=2017.3](https://www.jetbrains.com/help/phpstorm/2017.3/webpack.html?utm\_medium=help\_link\&utm\_source=from\_product\&utm\_campaign=PS\&utm\_content=2017.3)
 
 * es5를 쓸려면 webpack으로 module하고 shim을 쓸려면 쓰고. (shim은 html5, jquery, es5,6,7,...)
 * pollyfill로 대신?
@@ -30,7 +30,7 @@ After entering the entry point, webpack will figure out which other modules and 
 
     [https://www.zerocho.com/\](https://www.zerocho.com/category/EcmaScript/post/5757feea4bd934472a2ee52c](https://www.zerocho.com/]\(https://www.zerocho.com/category/EcmaScript/post/5757feea4bd934472a2ee52c)
 
-    [https://www.zerocho.com/](https://www.zerocho.com))
+    [https://www.zerocho.com/](https://www.zerocho.com/))
 
 [https://firejune.com/1798/%EC%B4%88%EB%B3%B4%EC%9E%90%EC%9A%A9+Webpack+%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC+%ED%8C%8C%ED%8A%B81+-+Webpack+%EC%9E%85%EB%AC%B8](https://firejune.com/1798/%EC%B4%88%EB%B3%B4%EC%9E%90%EC%9A%A9+Webpack+%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC+%ED%8C%8C%ED%8A%B81+-+Webpack+%EC%9E%85%EB%AC%B8)
 

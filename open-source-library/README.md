@@ -211,7 +211,7 @@ function (dismiss) {
 
 ### dragable, close button panel
 
-* [lobianijs](https://lobianijs.com) (admin panel)
+* [lobianijs](https://lobianijs.com/) (admin panel)
 
 Datetimepicker&#x20;
 

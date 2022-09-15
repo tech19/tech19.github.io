@@ -48,7 +48,7 @@ psm supported by laravel plugin and laravel-ide-helper below
     Session \
     Helpers\
 
-3.  **Laravel IDE helper : **\
+3.  **Laravel IDE helper :** \
     **PHPDoc**\
     Install [Laravel IDE helper generator](https://github.com/barryvdh/laravel-ide-helper)   `barryvdh/laravel-ide-helper`
 
@@ -56,7 +56,7 @@ psm supported by laravel plugin and laravel-ide-helper below
     \
     Add Laravel IDE helper as a `ServiceProvider` into the application\
     &#x20;In the config/app.php file, add `Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class` under the `providers` element:\
-    `// Laravel IDE helper `\
+    `// Laravel IDE helper` \
     `'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',`
 4. **Laravel generators Composer package** \
    3개의 추가 make commands\

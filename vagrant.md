@@ -13,7 +13,7 @@
 
     &#x20;config.vm.box = "puphpet/centos65-x64"&#x20;
 
-[https://puphpet.com/](https://puphpet.com) tool for configuring a Vagrant machine and generating a VagrantFile [https://app.vagrantup.com/boxes/search](https://app.vagrantup.com/boxes/search)
+[https://puphpet.com/](https://puphpet.com/) tool for configuring a Vagrant machine and generating a VagrantFile [https://app.vagrantup.com/boxes/search](https://app.vagrantup.com/boxes/search)
 
 ```
 Vagrant.configure(2) do |config|

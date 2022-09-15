@@ -26,7 +26,6 @@
 * [React](react.md)
 * [reqularExp](reqularexp.md)
 * [security](security.md)
-* [selenium](2018-06-06-selenium.md)
 * [slim](2018-06-06-slim.md)
 * [telegram api](telegram-api.md)
 * [validation](validation.md)
